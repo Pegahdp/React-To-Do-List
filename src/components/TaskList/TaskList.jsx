@@ -1,16 +1,20 @@
-const TaskList = () => {
-    return (  
-        <div>
-        <ul>
-          <li>
-            <input type="checkbox" />
-            <h2>Learn React</h2>
-            <button>Delete</button>
-          </li>
-          
-        </ul>
-      </div>
-    );
-}
- 
-export default TaskList
+import TaskItem from "../TaskItem/TaskItem";
+import "./TaskList.css";
+const TaskList = ({ tasks, deleteTask, handleChangeStatus }) => {
+  return (
+    <div className="TaskList">
+      <ul>
+        {tasks.map((task) => (
+          <TaskItem
+            key={`Task-${task.id}`}
+            task={task}
+            deleteTask={deleteTask}
+            handleChangeStatus={handleChangeStatus}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TaskList;

@@ -1,9 +1,10 @@
+import "./Footer.css";
 const Footer = () => {
-    return (  
-        <footer>
-        Developed by Pegah Pasha
-      </footer>
-    );
-}
- 
+  return (
+    <div className="footer">
+      <footer>Developed by Pegah Pasha</footer>
+    </div>
+  );
+};
+
 export default Footer;
