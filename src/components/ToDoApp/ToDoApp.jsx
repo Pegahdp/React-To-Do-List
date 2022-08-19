@@ -17,6 +17,8 @@ const ToDoApp = () => {
     if (storedTasks) {
       storedTasks = JSON.parse(storedTasks);
       setTasks(storedTasks);
+    }else{
+      storedTasks = []
     }
   }, []);
 
